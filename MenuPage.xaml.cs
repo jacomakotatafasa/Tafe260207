@@ -8,5 +8,10 @@ namespace Calculator
 		{
 			this.InitializeComponent();
 		}
+
+		private void MortgageButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MortgagePage));
+		}
 	}
 }

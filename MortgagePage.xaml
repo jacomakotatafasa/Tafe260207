@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="Calculator.MortgagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+   <Grid Background="White">
+    <StackPanel
+        Width="350"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+
+        <TextBlock
+            Text="Mortgage Calculator"
+            FontSize="32"
+            FontWeight="Bold"
+            Margin="0,0,0,20"/>
+
+        <TextBlock Text="Principal Borrowed ($)"/>
+        <TextBox
+            x:Name="principleBorrowTextBox"
+            PlaceholderText="e.g. 500000"
+            Margin="0,5,0,10"/>
+
+        <TextBlock Text="Yearly Interest Rate (%)"/>
+        <TextBox
+            x:Name="yearlyIntrstRateTextBox"
+            PlaceholderText="e.g. 6.5"
+            Margin="0,5,0,10"/>
+
+        <TextBlock Text="Years"/>
+        <TextBox
+            x:Name="yearsTextBox"
+            PlaceholderText="e.g. 30"
+            Margin="0,5,0,10"/>
+
+        <TextBlock Text="Additional Months"/>
+        <TextBox
+            x:Name="andMonthsTextBox"
+            PlaceholderText="e.g. 0"
+            Margin="0,5,0,15"/>
+
+        <Button
+            Content="Calculate"
+            Width="350"
+            Height="45"
+            Click="CalculateButton_Click"
+            Margin="0,0,0,15"/>
+
+        <TextBlock Text="Monthly Interest Rate"/>
+        <TextBox
+            x:Name="monthlyIntrstRateTextBox"
+            IsReadOnly="True"
+            Margin="0,5,0,10"/>
+
+        <TextBlock Text="Monthly Repayment ($)"/>
+        <TextBox
+            x:Name="monthlyRepaymentTextBox"
+            IsReadOnly="True"
+            Margin="0,5,0,10"/>
+
+    </StackPanel>
+</Grid>
+</Page>
