@@ -1,7 +1,8 @@
 ﻿using Calculator;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Popups;
+using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -26,11 +27,16 @@ namespace Calculator
 		{
 			Frame.Navigate(typeof(CurrencyConverterPage));
 		}
-private async void TripCalculator_Click(object sender, RoutedEventArgs e)
-{
-    var dialog = new MessageDialog("Trip calculator C# code will be developed later.");
-    await dialog.ShowAsync();
-}
+		private async void TripCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			ContentDialog dialog = new ContentDialog();
+
+			dialog.Title = "Trip Calculator";
+			dialog.Content = "Trip calculator C# code will be developed later.";
+			dialog.CloseButtonText = "OK";
+
+			dialog.ShowAsync();
+		}
 		private void Exit_Click(object sender, RoutedEventArgs e)
 		{
 			Application.Current.Exit();
